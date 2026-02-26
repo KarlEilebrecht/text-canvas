@@ -5,11 +5,11 @@ This project is a small utility project to quickly print structures in textual f
 
 ## Build Artifacts
 
-Latest build artifacts can be found on [Maven Central](https://central.sonatype.com/namespace/de.calamanari.tcanv).
+Latest build artifacts can be found on [Maven Central](https://central.sonatype.com/namespace/de.calamanari.util).
 
 ```xml
 		<dependency>
-			<groupId>de.calamanari.tcanv</groupId>
+			<groupId>de.calamanari.util</groupId>
 			<artifactId>text-canvas</artifactId>
 			<version>1.0.0</version>
 		</dependency>

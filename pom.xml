@@ -3,7 +3,7 @@
 	<groupId>de.calamanari.util</groupId>
 	<artifactId>text-canvas</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>Text Canvas</name>
 	<description>Supplementary classes for printing structures (trees) in textual form for debugging</description>
     <url>https://github.com/KarlEilebrecht/text-canvas</url>

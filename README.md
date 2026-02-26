@@ -21,7 +21,13 @@ The motivation for this project came from a recurring annoying task when impleme
 
 <img src="boxes.png" alt="top-down" height="400"/>
 
-Besides the basic features to print (labeled) boxes and lines into a predefined text area, this project provides support for any kind of tree-like data-structure. You only need to implement a single interface ([PrintableTreeNode](src/main/java/de/calamanari/tcanv/tp/PrintableTreeNode.java)) to let the [TreePrinter](src/main/java/de/calamanari/tcanv/tp/TreePrinter.java) iterate over your custom data structure. Out-of-the-box this allows for printing vertical and horizontal as well as index-like diagrams.
+Besides the basic features to print (labeled) boxes and lines into a predefined text area ([TextCanvas](src/main/java/de/calamanari/tcanv/TextCanvas.java)), this project provides support for any kind of tree-like data-structure. You only need to implement a single interface ([PrintableTreeNode](src/main/java/de/calamanari/tcanv/tp/PrintableTreeNode.java)) to let the [TreePrinter](src/main/java/de/calamanari/tcanv/tp/TreePrinter.java) iterate over your custom data structure.
+
+ * `getNodeLabel()` returns the current's node label (starting with the root)
+ * `getNumberOfSiblings()` must return the number (`n`) of siblings of the current node
+ * `getSiblingNode(idx)` must return the corresponding sibling node (`0 .. n-1`)
+
+Out-of-the-box this implementation allows for printing vertical and horizontal as well as index-like diagrams.
 
 <img src="top-down.png" alt="top-down" height="300"/>
 <img src="bottom-up.png" alt="top-down" height="300"/>
@@ -30,8 +36,8 @@ Besides the basic features to print (labeled) boxes and lines into a predefined 
 
 
 To get an idea how it works, please refere to the tests included in this project:
- * [TextCanvasTest](src/test/java/de/calamanari/tcanv/TextCanvasTest.java) covers the basic features to draw boxes and lines.
- * [TreePrinterTest](src/test/java/de/calamanari/tcanv/tp/TreePrinterTest.java) shows how to print a data structure as a vertical or horizontal tree resp. as an index.
+ * **[TextCanvasTest](src/test/java/de/calamanari/tcanv/TextCanvasTest.java)** covers the basic features to draw boxes and lines.
+ * **[TreePrinterTest](src/test/java/de/calamanari/tcanv/tp/TreePrinterTest.java)** shows how to print a data structure as a vertical or horizontal tree resp. as an index.
 
 
  

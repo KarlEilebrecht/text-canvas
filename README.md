@@ -11,7 +11,7 @@ Latest build artifacts can be found on [Maven Central](https://central.sonatype.
 		<dependency>
 			<groupId>de.calamanari.util</groupId>
 			<artifactId>text-canvas</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 		</dependency>
 ```
 

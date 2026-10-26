@@ -402,7 +402,7 @@ public class VerticalTreeDrawingPolicy extends AbstractStandardTreeDrawingPolicy
      * @return width of the canvas to draw the tree
      */
     private int computeCanvasWidth() {
-        return (!nodeFormatInfoCache.containsKey(NodeKey.root()) ? 1 : nodeFormatInfoCache.get(NodeKey.root()).totalWidth()) + frameConfig.indentLeft()
+        return (nodeFormatInfoCache.containsKey(NodeKey.root()) ? nodeFormatInfoCache.get(NodeKey.root()).totalWidth() : 1) + frameConfig.indentLeft()
                 + frameConfig.indentRight();
     }
 

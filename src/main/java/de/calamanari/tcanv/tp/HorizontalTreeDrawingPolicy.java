@@ -438,7 +438,7 @@ public class HorizontalTreeDrawingPolicy extends AbstractStandardTreeDrawingPoli
      * @return height of the canvas to draw the tree
      */
     public int computeCanvasHeight() {
-        return (!nodeFormatInfoCache.containsKey(NodeKey.root()) ? 1 : nodeFormatInfoCache.get(NodeKey.root()).totalHeight()) + frameConfig.indentTop()
+        return (nodeFormatInfoCache.containsKey(NodeKey.root()) ? nodeFormatInfoCache.get(NodeKey.root()).totalHeight() : 1) + frameConfig.indentTop()
                 + frameConfig.indentBottom();
     }
 

@@ -2183,6 +2183,10 @@ class TreePrinterTest {
 
         assertThrows(IllegalStateException.class, root::parent);
 
+        assertEquals(21, new HorizontalTreeDrawingPolicy(FrameConfig.frame10x5(), TreeLayoutConfig.getDefault(), true).computeCanvasWidth());
+        assertEquals(21, new IndexTreeDrawingPolicy(FrameConfig.frame10x5(), TreeLayoutConfig.index(), false).computeCanvasWidth());
+        assertEquals(21, new VerticalTreeDrawingPolicy(FrameConfig.frame10x5(), TreeLayoutConfig.getDefault(), false).computeCanvasWidth());
+
     }
 
     private static <T extends TestTreeNode<T>> T setupTestTree(Class<T> clazz) {

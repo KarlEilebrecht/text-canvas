@@ -401,7 +401,7 @@ public class VerticalTreeDrawingPolicy extends AbstractStandardTreeDrawingPolicy
     /**
      * @return width of the canvas to draw the tree
      */
-    private int computeCanvasWidth() {
+    public int computeCanvasWidth() {
         return (nodeFormatInfoCache.containsKey(NodeKey.root()) ? nodeFormatInfoCache.get(NodeKey.root()).totalWidth() : 1) + frameConfig.indentLeft()
                 + frameConfig.indentRight();
     }
@@ -409,7 +409,7 @@ public class VerticalTreeDrawingPolicy extends AbstractStandardTreeDrawingPolicy
     /**
      * @return height of the canvas to draw the tree
      */
-    private int computeCanvasHeight() {
+    public int computeCanvasHeight() {
         return (levelMaxSimpleNodeHeight.isEmpty() ? 1
                 : levelMaxSimpleNodeHeight.stream().collect(Collectors.summingInt(i -> i))
                         + ((levelMaxSimpleNodeHeight.size() - 1) * treeLayoutConfig.verticalSpacing()))
